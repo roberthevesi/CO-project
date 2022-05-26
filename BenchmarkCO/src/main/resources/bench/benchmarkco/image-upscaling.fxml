@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1076.0" style="-fx-background-color: 032D4CFF#032D4CFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bench.benchmarkco.ImageUpscaling">
+    <children>
+      <AnchorPane prefHeight="65.0" prefWidth="1280.0" style="-fx-background-color: WHITE;">
+         <children>
+            <JFXButton contentDisplay="CENTER" layoutX="1066.0" layoutY="26.0" onAction="#goToHelp" prefHeight="38.0" prefWidth="100.0" text="Help" />
+            <Pane prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #032d4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <JFXButton contentDisplay="CENTER" layoutX="1166.0" layoutY="26.0" onAction="#goToAboutUs" prefHeight="38.0" prefWidth="100.0" text="About Us" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="720.0" prefWidth="176.0" style="-fx-background-color: #032d4c;">
+         <children>
+            <VBox layoutX="14.0" layoutY="125.0" prefHeight="595.0" prefWidth="176.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0">
+               <children>
+                  <JFXButton fx:id="digitsButton" onAction="#goToDigitsOfPi" prefHeight="60.0" prefWidth="176.0" text="Digits of Pi" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../media/pngfind.com-pi-png-748898.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="60.0" prefWidth="176.0" text="Image Upscaling" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../media/pngfind.com-increase-arrow-png-4265479.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="cacheTestBtn" onAction="#goToCacheTest" prefHeight="60.0" prefWidth="176.0" text="Cache Test" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../media/pngfind.com-sin-cara-png-4806916.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#goHome" prefHeight="60.0" prefWidth="176.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../media/pngfind.com-house-icon-png-532461.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="179.0" layoutY="63.0" prefHeight="657.0" prefWidth="1100.0">
+         <children>
+            <Button fx:id="fileChooserButton" layoutX="130.0" layoutY="230.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="192.0" style="-fx-background-color: #065591#065591;" text="Choose File..." textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="fileChooserLabel" layoutX="335.0" layoutY="230.0" prefHeight="46.0" prefWidth="731.0" text="Label">
+               <font>
+                  <Font name="Arial Italic" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="startButton" layoutX="490.0" layoutY="576.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #032D4CFF#032D4CFF;" text="START" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="upscaleFactorLabel" layoutX="130.0" layoutY="400.0" prefHeight="46.0" prefWidth="240.0" text="Upscale factor (x):" textFill="#032d4c">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="upscaleFactor" layoutX="377.0" layoutY="400.0" prefHeight="46.0" prefWidth="59.0">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </TextField>
+            <Button fx:id="removeFileButton" layoutX="130.0" layoutY="300.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="192.0" style="-fx-background-color: #400000#400000;" text="Remove File" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="titleLabel" alignment="CENTER" layoutY="25.0" prefHeight="85.0" prefWidth="1097.0" text="Image Upscaling" textFill="#032d4c">
+               <font>
+                  <Font name="Arial Bold" size="74.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="pointGif" fitHeight="129.0" fitWidth="199.0" opacity="0.34" pickOnBounds="true" preserveRatio="true" x="300.0" y="500.0">
+               <image>
+                  <Image url="@../../../media/point.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="scoreLabel" layoutX="130.0" layoutY="454.0" prefHeight="46.0" prefWidth="944.0" text="scor" textFill="#032d4c">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="outputLabel" layoutX="130.0" layoutY="500.0" prefHeight="46.0" prefWidth="944.0" text="output" textFill="#032d4c">
+               <font>
+                  <Font name="Arial Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bench.benchmarkco.CacheTest">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="26.0" prefWidth="1280.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: #032d4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </top>
+         <center>
+            <AnchorPane prefHeight="720.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="1010.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../media/pngfind.com-pi-png-748898.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="widthTextFieldd" layoutX="793.0" layoutY="232.0" prefHeight="46.0" prefWidth="160.0" />
+                  <TextField fx:id="factorTextFieldd" layoutX="794.0" layoutY="295.0" prefHeight="46.0" />
+                  <Label fx:id="titleLabel" alignment="CENTER" layoutX="-3.0" layoutY="52.0" prefHeight="85.0" prefWidth="1083.0" text="Sum of Prime Numbers" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial Bold" size="74.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="startTestButtonn" layoutX="490.0" layoutY="576.0" mnemonicParsing="false" onAction="#startTest" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #032D4CFF#032D4CFF;" text="START" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="withButtonn" layoutX="129.0" layoutY="232.0" mnemonicParsing="false" onAction="#setWithButton" prefHeight="47.0" prefWidth="312.0" style="-fx-background-color: #065591#065591;" text="With loop-unrolling" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="withoutButtonn" layoutX="129.0" layoutY="295.0" mnemonicParsing="false" onAction="#setWithoutButtonn" prefHeight="47.0" prefWidth="312.0" style="-fx-background-color: #065591#065591;" text="Without loop-unrolling" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="loopUnrollLabell" layoutX="129.0" layoutY="171.0" prefHeight="46.0" prefWidth="819.0" text="Choose the desired method of computing the sum" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="widthLabell" layoutX="616.0" layoutY="232.0" prefHeight="46.0" prefWidth="170.0" text="Upper bound" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="unrollingFactorLabell" layoutX="616.0" layoutY="295.0" prefHeight="46.0" prefWidth="165.0" text="Unroll factor" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SumLabel" alignment="CENTER" layoutX="7.0" layoutY="392.0" prefHeight="46.0" prefWidth="1094.0" text="Scor?" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="exceptionLabel" alignment="CENTER" layoutX="8.0" layoutY="492.0" prefHeight="46.0" prefWidth="1092.0" text="Exception?" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="betterLabel" alignment="CENTER" layoutX="9.0" layoutY="438.0" prefHeight="46.0" prefWidth="1094.0" text="better than x%" textFill="#032d4c">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <JFXButton contentDisplay="CENTER" layoutX="817.0" layoutY="14.0" onAction="#goToHelp" prefHeight="38.0" prefWidth="135.0" text="Help" />
+                          <JFXButton contentDisplay="CENTER" layoutX="953.0" layoutY="14.0" onAction="#goToAboutUs" prefHeight="38.0" prefWidth="136.0" text="About Us" />
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <AnchorPane prefHeight="803.0" prefWidth="176.0" style="-fx-background-color: #032d4c;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="14.0" layoutY="94.0" prefHeight="596.0" prefWidth="176.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+                     <children>
+                        <JFXButton fx:id="digitsOfPiBtn1" onAction="#goToDigitsOfPi" prefHeight="60.0" prefWidth="176.0" text="Digits of Pi" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../media/pngfind.com-pi-png-748898.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="imageUpscalingBtn1" onAction="#goToImageUpscaling" prefHeight="60.0" prefWidth="176.0" text="Image Upscaling" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../media/pngfind.com-increase-arrow-png-4265479.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="cacheTestBtn" prefHeight="60.0" prefWidth="176.0" text="Cache Test" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../media/pngfind.com-sin-cara-png-4806916.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#goHome" prefHeight="60.0" prefWidth="176.0" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../media/pngfind.com-house-icon-png-532461.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+        </BorderPane>
+    </children>
+</AnchorPane>
